@@ -1,0 +1,28 @@
+# Ignorer dossiers temporaires ou inutiles
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints/
+.DS_Store
+
+# Ignorer les notebooks ou data lourdes
+data/
+run/
+dataset/
+outputs/
+models/
+
+# Ignorer les API sensibles ou locales
+api_keys.py
+api/
+secrets/
+config/local_*
+
+# Ignorer les environnements
+.env
+.venv/
+venv/
+env/
+
+
