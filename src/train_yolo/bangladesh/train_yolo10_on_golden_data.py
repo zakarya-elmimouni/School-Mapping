@@ -1,15 +1,15 @@
 from ultralytics import YOLO
 
-# Path to YAML file
-
-DATA_YAML = 'dataset/brazil/manual_labeled_data/data.yaml'
+# Path to your YAML file
+'
+DATA_YAML = 'dataset/bangladesh/manual_labeled_data/data.yaml'
 # Model: YOLO10n
 model = YOLO('yolov10n.pt')
 
 # Training
 results = model.train(
     data=DATA_YAML,
-    epochs=60,
+    epochs=100,
     imgsz=500 ,
     batch=64,
     lr0=0.001,
@@ -17,12 +17,12 @@ results = model.train(
     pretrained=True,
     seed=0,
     device=[0,1],
-    project='results/brazil/rslt_yolo10n_manual_labeled_data',
+    project='results/bangladesh/rslt_yolo10n_manual_labeled_data',
     name='exp',
     save=True,
     plots=True,
-    patience=8,  # early stopping
-    save_period=20,
+    patience=10,  # early stopping
+    save_period=40,
     verbose=True
 
 )
