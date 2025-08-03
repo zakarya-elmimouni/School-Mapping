@@ -10,12 +10,6 @@ from collections import defaultdict
 
 
 
-#MODEL_PATH = "results/brazil/rslt_yolo10n_finetune_auto_on_golden/exp/weights/best.pt"
-#DATA_YAML = "dataset/brazil/manual_labeled_data/data.yaml"
-#IMAGES_TEST_DIR = "dataset/brazil/manual_labeled_data/images/test"
-#LABELS_TEST_DIR = "dataset/brazil/manual_labeled_data/labels/test"
-#OUTPUT_METRICS_TXT = "results/brazil/rslt_yolo10n_finetune_auto_on_golden/exp/outputs/evaluation_metrics.txt"
-#OUTPUT_IMG_DIR = "results/brazil/rslt_yolo10n_finetune_auto_on_golden/exp/outputs/yolo_predictions"
 
 
 MODEL_PATH = "results/global_golden/rslt_yolo10n_finetuning_params_finetuned_brazil/best/weights/best.pt"
