@@ -10,20 +10,15 @@ from collections import defaultdict
 
 
 
-MODEL_PATH = "results/global_golden/rslt_yolo10n_finetuning_params_finetuned_brazil/try5/weights/best.pt"
+MODEL_PATH = "results/global_golden/rslt_yolo10n_finetuning_params_finetuned_nigeria/best/weights/best.pt"
 DATA_YAML = 'dataset/global_golden_dataset/data.yaml'
 IMAGES_TEST_DIR = "dataset/global_golden_dataset/images/test"
 LABELS_TEST_DIR = "dataset/global_golden_dataset/labels/test"
-OUTPUT_METRICS_TXT = "results/global_golden/rslt_yolo10n_finetuning_params_finetuned_brazil/try5/outputs/evaluation_metrics.txt"
-OUTPUT_IMG_DIR = "results/global_golden/rslt_yolo10n_finetuning_params_finetuned_brazil/try5/outputs/yolo_predictions"
+OUTPUT_METRICS_TXT = "results/global_golden/rslt_yolo10n_finetuning_params_finetuned_nigeria/best/outputs/evaluation_metrics.txt"
+OUTPUT_IMG_DIR = "results/global_golden/rslt_yolo10n_finetuning_params_finetuned_nigeria/best/outputs/yolo_predictions"
 
 
-#MODEL_PATH = "results/peru/rslt_yolo10n_finetuning_auto_on_golden_best_params/try3/weights/best.pt"
-#DATA_YAML = "dataset/peru/manual_labeled_data/data.yaml"
-#IMAGES_TEST_DIR = "dataset/peru/manual_labeled_data/images/test"
-#LABELS_TEST_DIR = "dataset/peru/manual_labeled_data/labels/test"
-#OUTPUT_METRICS_TXT = "results/peru/rslt_yolo10n_finetuning_auto_on_golden_best_params/try3/outputs/evaluation_metrics.txt"
-#OUTPUT_IMG_DIR = "results/peru/rslt_yolo10n_finetuning_auto_on_golden_best_params/try3/outputs/yolo_predictions"
+
 
 
 

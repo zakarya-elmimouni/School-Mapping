@@ -10,20 +10,13 @@ from collections import defaultdict
 
 
 
-#MODEL_PATH = "results/brazil/rslt_yolo10n_finetune_auto_on_golden/exp/weights/best.pt"
-#DATA_YAML = "dataset/brazil/manual_labeled_data/data.yaml"
-#IMAGES_TEST_DIR = "dataset/brazil/manual_labeled_data/images/test"
-#LABELS_TEST_DIR = "dataset/brazil/manual_labeled_data/labels/test"
-#OUTPUT_METRICS_TXT = "results/brazil/rslt_yolo10n_finetune_auto_on_golden/exp/outputs/evaluation_metrics.txt"
-#OUTPUT_IMG_DIR = "results/brazil/rslt_yolo10n_finetune_auto_on_golden/exp/outputs/yolo_predictions"
 
-
-MODEL_PATH = "results/nigeria/rslt_yolo10n_finetuning_auto_on_golden_best_params/try6/weights/best.pt"
+MODEL_PATH = "results/nigeria/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/weights/best.pt"
 DATA_YAML = "dataset/nigeria/manual_labeled_data/data.yaml"
 IMAGES_TEST_DIR = "dataset/nigeria/manual_labeled_data/images/test"
 LABELS_TEST_DIR = "dataset/nigeria/manual_labeled_data/labels/test"
-OUTPUT_METRICS_TXT = "results/nigeria/rslt_yolo10n_finetuning_auto_on_golden_best_params/try6/outputs/evaluation_metrics.txt"
-OUTPUT_IMG_DIR = "results/nigeria/rslt_yolo10n_finetuning_auto_on_golden_best_params/try6/outputs/yolo_predictions"
+OUTPUT_METRICS_TXT = "results/nigeria/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/outputs/evaluation_metrics.txt"
+OUTPUT_IMG_DIR = "results/nigeria/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/outputs/yolo_predictions"
 
 
 

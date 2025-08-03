@@ -7,12 +7,7 @@ from ultralytics import YOLO
 from pathlib import Path
 from collections import defaultdict
 
-#MODEL_PATH = "results/brazil/rslt_yolo12n_manual_labeled_data/exp_augment_train/weights/best.pt"
-#DATA_YAML = "dataset/brazil/fixed_bb_and_manual_data/manual_labeled_data/data.yaml"
-#IMAGES_TEST_DIR = "dataset/brazil/fixed_bb_and_manual_data/manual_labeled_data/images/test"
-#LABELS_TEST_DIR = "dataset/brazil/fixed_bb_and_manual_data/manual_labeled_data/labels/test"
-#OUTPUT_METRICS_TXT = "results/brazil/rslt_yolo12n_manual_labeled_data/exp_augment_train/new_outputs/evaluation_metrics.txt"
-#OUTPUT_IMG_DIR = "results/brazil/rslt_yolo12n_manual_labeled_data/exp_augment_train/new_outputs/yolo_predictions"
+
 
 
 MODEL_PATH = "results/brazil/rslt_yolo11s_auto_labeling/exp/weights/best.pt"
@@ -23,20 +18,6 @@ OUTPUT_METRICS_TXT = "results/brazil/rslt_yolo11s_auto_labeling/exp/outputs_1/ev
 OUTPUT_IMG_DIR = "results/brazil/rslt_yolo11s_auto_labeling/exp/outputs_1/yolo_predictions"
 
 
-#MODEL_PATH = "results/brazil/rslt_yolo12n_finetune_auto_augmented_on_augmented_golden/exp/weights/best.pt"
-#DATA_YAML = "dataset/brazil/fixed_bb_and_manual_data/manual_labeled_data/data.yaml"
-#IMAGES_TEST_DIR = "dataset/brazil/fixed_bb_and_manual_data/manual_labeled_data/images/test"
-#LABELS_TEST_DIR = "dataset/brazil/fixed_bb_and_manual_data/manual_labeled_data/labels/test"
-#OUTPUT_METRICS_TXT = "results/brazil/rslt_yolo12n_finetune_auto_augmented_on_augmented_golden/exp/new_outputs/evaluation_metrics.txt"
-#OUTPUT_IMG_DIR = "results/brazil/rslt_yolo12n_finetune_auto_augmented_on_augmented_golden/exp/new_outputs/yolo_predictions"
-
-# === CONFIGURATION ===
-#MODEL_PATH = "results/brazil/rslt_yolo12n_auto_label/exp5/weights/best.pt"
-#DATA_YAML = "dataset/brazil/fixed_bb_and_manual_data/manual_labeled_data/data.yaml"
-#IMAGES_TEST_DIR = "dataset/brazil/fixed_bb_and_manual_data/manual_labeled_data/images/test"
-#LABELS_TEST_DIR = "dataset/brazil/fixed_bb_and_manual_data/manual_labeled_data/labels/test"
-#OUTPUT_METRICS_TXT = "results/brazil/rslt_yolo12n_auto_label/exp5/outputs1/evaluation_metrics.txt"
-#OUTPUT_IMG_DIR = "results/brazil/rslt_yolo12n_auto_label/exp5/outputs1/yolo_predictions"
 
 
 NUM_IMAGES = 30
