@@ -23,5 +23,16 @@ run:
 
 ```bash
 pip install -r requirements.txt
-
+```
 ### 2. Download satellite images (due to Google Maps API restrictions)
+
+⚠️ **We do not share image files directly.**  
+Google's usage policy does not allow redistribution of Static Map images.  
+To reproduce the dataset:
+
+- Get a [Google Static Maps API key](https://developers.google.com/maps/documentation/maps-static/get-api-key)
+- Run the script provided in the repo to download images:
+
+```bash
+python scripts/download_images.py --country brazil --api_key YOUR_KEY
+```
