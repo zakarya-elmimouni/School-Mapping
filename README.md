@@ -24,3 +24,4 @@ run:
 ```bash
 pip install -r requirements.txt
 
+### 2. Download satellite images (due to Google Maps API restrictions)
