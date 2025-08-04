@@ -31,8 +31,28 @@ Google's usage policy does not allow redistribution of Static Map images.
 To reproduce the dataset:
 
 - Get a [Google Static Maps API key](https://developers.google.com/maps/documentation/maps-static/get-api-key)
-- Run the script provided in the repo to download images:
+- For each country run the code provided in scripts/download_data_from_static_maps_api.
 
-```bash
-python scripts/download_images.py --country brazil --api_key YOUR_KEY
+### 2. Clean and generate automatic labels (bounding boxes) 
+- Clean outlier images (blurred, vegetation, sea, desert) and generate the bounding boxes with segementation using the codes provided in the folder scripts/cleaning_scripts
+### 3. Prepare YOLO dataset (Auto-labeled)
+ - Build the YOLO-compatible dataset with auto-labeled bounding boxes and apply standard augmentations
+### 4. Prepare Golden Dataset
+-The golden dataset consists of manually annotated labels in YOLO format.
+- You will find label files in:
+
+ ```bash
+dataset/{country}/manaully_labeled_data/labels
 ```
+To use this dataset:
+- Copy only the matching images from data/{country}/satellite/ (same filenames as labels).
+- Build the golden dataset for each country
+### 7. Train and Evaluate YOLO models
+Once the datasets are ready you can lunch the training and evaluation.
+### 8. Hyperparameters (ECP)
+
+We optimized the training hyperparameters using the [ECP algorithm](https://arxiv.org/abs/2502.04290), a black-box optimization method well-suited for tuning costly deep learning models.
+
+All optimal hyperparameter configurations are stored in the folder: hyperparamaters.
+
+
