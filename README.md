@@ -47,9 +47,13 @@ dataset/{country}/manaully_labeled_data/labels
 To use this dataset:
 - Copy only the matching images from data/{country}/satellite/ (same filenames as labels).
 - Build the golden dataset for each country
-### 7. Train and Evaluate YOLO models
+
+### 7. Prepare Global Dataset
+- run the code in scripts/create_globale_golden_dataset.py to create the global golden dataset.
+
+### 8. Train and Evaluate YOLO models
 Once the datasets are ready you can lunch the training and evaluation.
-### 8. Hyperparameters (ECP)
+### 9. Hyperparameters (ECP)
 
 We optimized the training hyperparameters using the [ECP algorithm](https://arxiv.org/abs/2502.04290), a black-box optimization method well-suited for tuning costly deep learning models.
 
