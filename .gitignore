@@ -8,9 +8,9 @@ __pycache__/
 
 # Ignorer les notebooks ou data lourdes
 results/
-data/
+
 run/
-dataset/
+
 outputs/
 models/
 
