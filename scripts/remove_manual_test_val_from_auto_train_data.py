@@ -1,8 +1,11 @@
 import os
 
+""" this script removes images and labels from the train auto-labeled set that are also present in the val and test sets of the golden dataset"""
+
+
 # ------------ CONFIGURATION ------------
-base_path = "dataset/bangladesh/manual_labeled_data"
-target_path="dataset/bangladesh/dataset_yolo_auto_labeling"
+base_path = "dataset/bangladesh/manual_labeled_data"   # change as needed
+target_path="dataset/bangladesh/dataset_yolo_auto_labeling" #change as needed
   # Allowed image extensions
 img_extensions = (".jpg", ".jpeg", ".png")
 # ------------ STEP 1: Collect all image filenames from val and test ------------

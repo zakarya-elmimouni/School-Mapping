@@ -2,6 +2,9 @@ import os
 import shutil
 from glob import glob
 
+
+""" this script creates a global golden dataset for YOLO from four countries' datasets."""
+
 # === Configuration ===
 countries = ["brazil", "peru", "colombia", "nigeria"]
 splits = ["train", "val", "test"]

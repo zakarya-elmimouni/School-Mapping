@@ -11,12 +11,12 @@ from collections import defaultdict
 
 
 
-MODEL_PATH = "results/bangladesh/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/weights/best.pt"
-DATA_YAML = "dataset/bangladesh/manual_labeled_data/data.yaml"
-IMAGES_TEST_DIR = "dataset/bangladesh/manual_labeled_data/images/test"
-LABELS_TEST_DIR = "dataset/bangladesh/manual_labeled_data/labels/test"
-OUTPUT_METRICS_TXT = "results/bangladesh/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/outputs/evaluation_metrics.txt"
-OUTPUT_IMG_DIR = "results/bangladesh/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/outputs/yolo_predictions"
+MODEL_PATH = "path/to/weights/best.pt"
+DATA_YAML = "path/to/data.yaml"
+IMAGES_TEST_DIR = "path/to/images/test"
+LABELS_TEST_DIR = "path/to/labels/test"
+OUTPUT_METRICS_TXT = "path/to/output/metrics.txt"
+OUTPUT_IMG_DIR = "path/to/output/visualizations"
 
 
 

@@ -8,14 +8,15 @@ from pathlib import Path
 from collections import defaultdict
 
 
+""" this script evaluates the finetuned brazil model, on the golden test set of bangaldesh dataset."""
 
-
-MODEL_PATH = "results/brazil/rslt_yolo10n_finetuning_auto_on_golden_best_params/try4_best/weights/best.pt"
+#change as needed
+MODEL_PATH = "results/brazil/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/weights/best.pt"
 DATA_YAML = "dataset/bangladesh/manual_labeled_data/data.yaml"
 IMAGES_TEST_DIR = "dataset/bangladesh/manual_labeled_data/images/test"
 LABELS_TEST_DIR = "dataset/bangladesh/manual_labeled_data/labels/test"
-OUTPUT_METRICS_TXT = "results/brazil/rslt_yolo10n_finetuning_auto_on_golden_best_params/try4_best/outputs_over_bangladesh/evaluation_metrics.txt"
-OUTPUT_IMG_DIR = "results/brazil/rslt_yolo10n_finetuning_auto_on_golden_best_params/try4_best/outputs_over_bangladesh/yolo_predictions"
+OUTPUT_METRICS_TXT = "results/brazil/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/outputs_over_bangladesh/evaluation_metrics.txt"
+OUTPUT_IMG_DIR = "results/brazil/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/outputs_over_bangladesh/yolo_predictions"
 
 
 

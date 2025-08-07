@@ -6,7 +6,7 @@ from urllib.parse import urlencode
 
 # ------------ Configuration ------------
 API_KEY   = 'Your API key"
-CSV_PATH  = "data/nigeria/Data_nigeria_11000_dedup.csv"
+CSV_PATH  = "data/nigeria/Data_nigeria_11000_dedup.csv"  # the csv file in data folder contains the coordinates of school and non-school.
 
 BASE_DIR  = "data"
 SAT_DIR   = os.path.join(BASE_DIR, "satellite")

@@ -2,10 +2,8 @@ from ultralytics import YOLO
 
 # Path to your YAML file
 DATA_YAML = 'dataset/brazil/manual_labeled_data/data.yaml'
-#DATA_YAML = 'dataset/brazil/manual_labeled_data/data.yaml'
-# Model: YOLO12n
-#model = YOLO('yolo12n.pt')
-model = YOLO('results/brazil/rslt_yolo10n_auto_labeling_plus_manual_data/exp/weights/best.pt')
+
+model = YOLO('path/to/existing model') # existing model to finetune
 # Training
 results = model.train(
     data=DATA_YAML,
@@ -17,16 +15,13 @@ results = model.train(
     pretrained=True,
     seed=0,
     device=[0,1],
-    project='results/brazil/rslt_yolo10n_finetune_auto_and_manual_on_golden',
+    project='results/brazil/rslt_yolo10n_finetune_auto_and_manual_on_golden', # change to your desired project name
     name='exp',
     save=True,
     plots=True,
     patience=7,  # early stopping
     save_period=10,
     verbose=True
-   # translate=0.2,
-   # degrees=15,
-   # auto_augment=None
 )
 
 print(f"? Best model saved at: {results.save_dir}/weights/best.pt")

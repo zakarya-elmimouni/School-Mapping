@@ -6,11 +6,11 @@ from urllib.parse import urlencode
 
 # ------------ Configuration ------------
 API_KEY   = 'Your API key"
-CSV_PATH  = "data/bangladesh/Data_bangladesh_6324_dedup.csv"
+CSV_PATH  = "data/bangladesh/Data_bangladesh_6324_dedup.csv" # the csv file in data folder contains the coordinates of school and non-school.
 
 BASE_DIR  = "data"
 SAT_DIR   = os.path.join(BASE_DIR, "satellite")
-LABELS_CSV = "files_bangladeh.csv" # downloaded files
+LABELS_CSV = "files_bangladeh.csv" # downloaded files are saved in this csv file
 
 # Create sub-folders: "school" and "non_school"
 for sub in ("school", "non_school"):

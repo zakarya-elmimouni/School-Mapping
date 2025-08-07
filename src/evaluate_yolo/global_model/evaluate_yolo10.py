@@ -10,12 +10,12 @@ from collections import defaultdict
 
 
 
-MODEL_PATH = "results/global_golden/rslt_yolo10n_finetuning_params_finetuned_nigeria/best/weights/best.pt"
-DATA_YAML = 'dataset/global_golden_dataset/data.yaml'
-IMAGES_TEST_DIR = "dataset/global_golden_dataset/images/test"
-LABELS_TEST_DIR = "dataset/global_golden_dataset/labels/test"
-OUTPUT_METRICS_TXT = "results/global_golden/rslt_yolo10n_finetuning_params_finetuned_nigeria/best/outputs/evaluation_metrics.txt"
-OUTPUT_IMG_DIR = "results/global_golden/rslt_yolo10n_finetuning_params_finetuned_nigeria/best/outputs/yolo_predictions"
+MODEL_PATH = "path/to/weights/best.pt"
+DATA_YAML = "path/to/data.yaml"
+IMAGES_TEST_DIR = "path/to/images/test"
+LABELS_TEST_DIR = "path/to/labels/test"
+OUTPUT_METRICS_TXT = "path/to/output/metrics.txt"
+OUTPUT_IMG_DIR = "path/to/output/visualizations"
 
 
 

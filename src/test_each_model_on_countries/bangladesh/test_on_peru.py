@@ -8,7 +8,7 @@ from pathlib import Path
 from collections import defaultdict
 
 
-
+""" this script evaluates the finetuned bangaldesh model on the golden test set of peru dataset."""
 
 MODEL_PATH = "results/bangladesh/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/weights/best.pt"
 DATA_YAML = "dataset/peru/manual_labeled_data/data.yaml"

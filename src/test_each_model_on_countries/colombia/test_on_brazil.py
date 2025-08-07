@@ -9,6 +9,8 @@ from collections import defaultdict
 
 
 
+""" this script evaluates the finetuned colombia's model, on the golden test set of brazil dataset."""
+
 
 MODEL_PATH = "results/colombia/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/weights/best.pt"
 DATA_YAML = "dataset/brazil/manual_labeled_data/data.yaml"

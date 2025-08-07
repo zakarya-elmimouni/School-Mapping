@@ -10,7 +10,7 @@ from samgeo.text_sam import LangSAM
 
 # ---------------- Configuration ----------------
 INPUT_DIR  = "data/brazil/satellite/school"
-OUTPUT_DIR = "dataset/brazil/satellite1"
+OUTPUT_DIR = "dataset/brazil/satellite"
 CROP_SIZE  = 400
 
 GLOBAL_VEG_THRESHOLD = 0.8

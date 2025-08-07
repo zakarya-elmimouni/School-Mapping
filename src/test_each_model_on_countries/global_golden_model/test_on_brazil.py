@@ -9,6 +9,7 @@ from collections import defaultdict
 
 
 
+""" this script evaluates the finetuned global model, on the golden test set of brazil dataset."""
 
 
 MODEL_PATH = "results/global_golden/rslt_yolo10n_finetuning_params_finetuned_brazil/best/weights/best.pt"

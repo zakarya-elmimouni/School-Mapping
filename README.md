@@ -53,6 +53,6 @@ Once the datasets are ready you can lunch the training and evaluation.
 
 We optimized the training hyperparameters using the [ECP algorithm](https://arxiv.org/abs/2502.04290), a black-box optimization method well-suited for tuning costly deep learning models.
 
-All optimal hyperparameter configurations are stored in the folder: hyperparamaters.
+All optimal hyperparameter for the Finetuned models with ECP, are stored in the folder: hyperparamaters.
 
 

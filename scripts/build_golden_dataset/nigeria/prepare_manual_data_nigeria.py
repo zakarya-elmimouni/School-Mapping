@@ -4,11 +4,11 @@ import random
 from pathlib import Path
 
 # ---------- CONFIGURATION ---------------------------------------------------
-LABEL_SRC_DIR     = Path("dataset/nigeria/manual_labeled_images")                       # existing .txt labels
+LABEL_SRC_DIR     = Path("path/to/existing/labels")                       # existing .txt labels
 POS_IMAGE_SRC_DIR = Path("data/nigeria/satellite/school")         # positive images
 NEG_IMAGE_SRC_DIR = Path("dataset/nigeria/negative_nigeria")     # negative images
 
-DEST_BASE_DIR     = Path("dataset/nigeria/manual_labeled_data")
+DEST_BASE_DIR     = Path("dataset/nigeria/manual_labeled_data") #save new dataset
 LABEL_DEST_DIR    = DEST_BASE_DIR / "labels"
 IMAGE_DEST_DIR    = DEST_BASE_DIR / "images"
 

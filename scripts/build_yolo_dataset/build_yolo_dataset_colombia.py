@@ -2,6 +2,8 @@ import os
 import shutil
 import random
 
+""" this script prepares a YOLO dataset for colombia based on auto-labeled images and thier labels provided by our automatic piepline"""
+
 # ------------ CONFIGURATION ------------
 school_img_dir = "dataset/colombia/satellite/school"
 school_lbl_dir = "dataset/colombia/satellite/school_labels"

@@ -8,6 +8,7 @@ from pathlib import Path
 from collections import defaultdict
 
 
+""" this script evaluates the finetuned global model, on the golden test set of nigeria dataset."""
 
 
 

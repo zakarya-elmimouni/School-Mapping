@@ -5,7 +5,7 @@ import numpy as np
 from ultralytics import YOLO
 
 
-DATA_YAML = 'dataset/nigeria/manual_labeled_data/data.yaml'
+DATA_YAML = 'dataset/nigeria/manual_labeled_data/data.yaml' # change as needed
 
 
 # === Step 1: Clone ECP if not already present ===
@@ -53,11 +53,10 @@ class YOLOObjective:
             f"lr{lr0:.1e}_lrf{lrf:.2f}_m{momentum:.2f}_wd{weight_decay:.4f}"
             f"_box{box:.1f}_t{translate:.2f}_cls{cls:.2f}_dfl{dfl:.2f}_dr{dropout:.2f}_erase{erasing:.2f}"
         )
-        save_dir="results/nigeria/rslt_yolo10n_finetuning_auto_on_golden_best_params"
+        save_dir="results/nigeria/rslt_yolo10n_finetuning_auto_on_golden_best_params" # directory to save results
 
         try:
-            model = YOLO("results/nigeria/rslt_yolo10n_auto_labeling/exp/weights/best.pt")
-
+            model = YOLO("results/nigeria/rslt_yolo10n_auto_labeling/exp/weights/best.pt") # Load the best model from previous training
             results = model.train(
                 data=DATA_YAML,
                 epochs=15,
@@ -80,7 +79,7 @@ class YOLOObjective:
                 save=True,
                 save_period=20,
                 verbose=False,
-                project="results/nigeria/rslt_yolo10n_finetuning_auto_on_golden_best_params",
+                project="results/nigeria/rslt_yolo10n_finetuning_auto_on_golden_best_params", # directory to save results
                 name=exp_name,
             )
 
@@ -107,7 +106,7 @@ class YOLOObjective:
 if __name__ == "__main__":
     objective = YOLOObjective()
 
-    # Run ECP with 50 evaluations (increase if resources allow)
+    # Run ECP with 60 evaluations (increase if resources allow)
     n_evals = 60
     points, values, epsilons = ECP(objective, n=n_evals)
 

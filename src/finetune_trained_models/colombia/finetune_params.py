@@ -4,6 +4,7 @@ import csv
 import numpy as np
 from ultralytics import YOLO
 
+""" this script is used to finetune YOLOv10n already trained on auto-dataset, using ECP for hyperparameter optimization."""
 
 DATA_YAML = 'dataset/colombia/manual_labeled_data/data.yaml'
 

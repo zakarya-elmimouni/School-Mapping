@@ -7,7 +7,7 @@ from ultralytics import YOLO
 from pathlib import Path
 from collections import defaultdict
 
-
+""" this script evaluates the finetuned peru's model, on the golden test set of bangaldesh dataset."""
 
 
 

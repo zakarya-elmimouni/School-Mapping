@@ -9,7 +9,7 @@ from collections import defaultdict
 
 
 
-
+""" this script evaluates the finetuned colombia's model, on the golden test set of bangaldesh dataset."""
 
 
 MODEL_PATH = "results/colombia/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/weights/best.pt"

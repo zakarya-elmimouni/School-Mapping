@@ -3,12 +3,12 @@ import shutil
 import random
 from pathlib import Path
 
-# ---------- CONFIGURATION ---------------------------------------------------
-LABEL_SRC_DIR     = Path("dataset/bangladesh/manual_labeled_images")                       # existing .txt labels
-POS_IMAGE_SRC_DIR = Path("data/bangladesh/satellite/school")         # positive images
-NEG_IMAGE_SRC_DIR = Path("dataset/bangladesh/negative_bangladesh")     # negative images
+"""Prepare manual labeled data for Bangladesh school detection. labels are provided in .txt files in dataset/bangladesh/manual_labeled_data/labels"""
 
-DEST_BASE_DIR     = Path("dataset/bangladesh/manual_labeled_data")
+# ---------- CONFIGURATION ---------------------------------------------------
+LABEL_SRC_DIR     = Path("path/to/labels")          # existing .txt labels
+POS_IMAGE_SRC_DIR = Path("data/bangladesh/satellite/school")         # positive images
+DEST_BASE_DIR     = Path("dataset/bangladesh/manual_labeled_data") # path to store the new dataset
 LABEL_DEST_DIR    = DEST_BASE_DIR / "labels"
 IMAGE_DEST_DIR    = DEST_BASE_DIR / "images"
 
@@ -40,31 +40,19 @@ def copy_positive_pairs() -> tuple[int, int]:
             print(f"[WARNING] No positive image found for {stem}")
     return n_labels, n_pos_imgs
 
-def copy_negative_images(limit: int = 100) -> int:
-    #List and filter valid image files
-    neg_images = [p for p in NEG_IMAGE_SRC_DIR.iterdir() if p.suffix.lower() in IMG_EXTS and p.is_file()]
-    
-    # Randomly sample
-    sampled = random.sample(neg_images, min(len(neg_images), limit))
 
-    for img_path in sampled:
-        shutil.copy2(img_path, IMAGE_DEST_DIR / img_path.name)
-        empty_label = LABEL_DEST_DIR / f"{img_path.stem}.txt"
-        empty_label.touch(exist_ok=True)
-
-    return len(sampled)
 
 def main() -> None:
     ensure_dirs()
 
     pos_labels, pos_images = copy_positive_pairs()
-    neg_images = copy_negative_images(limit=NEGATIVE_LIMIT)
+    
 
     print(
         f"Finished.\n"
         f"  Positive labels copied : {pos_labels}\n"
         f"  Positive images copied : {pos_images}\n"
-        f"  Negative images added  : {neg_images} (max = {NEGATIVE_LIMIT})\n"
+        #f"  Negative images added  : {neg_images} (max = {NEGATIVE_LIMIT})\n"
         f"Destination folders: {IMAGE_DEST_DIR} & {LABEL_DEST_DIR}"
     )
 

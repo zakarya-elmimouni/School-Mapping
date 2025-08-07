@@ -4,6 +4,8 @@ import csv
 import numpy as np
 from ultralytics import YOLO
 
+""" This script uses the ECP optimizer to fine-tune YOLOv10n hyperparameters of the model already trained on auto-labeled data ."""
+
 
 DATA_YAML = 'dataset/brazil/manual_labeled_data/data.yaml'
 

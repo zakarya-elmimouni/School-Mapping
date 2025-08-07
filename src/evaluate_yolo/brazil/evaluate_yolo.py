@@ -10,12 +10,13 @@ from collections import defaultdict
 
 
 
-MODEL_PATH = "results/brazil/rslt_yolo11s_auto_labeling/exp/weights/best.pt"
-DATA_YAML = "dataset/brazil/manual_labeled_data/data.yaml"
-IMAGES_TEST_DIR = "dataset/brazil/manual_labeled_data/images/test"
-LABELS_TEST_DIR = "dataset/brazil/manual_labeled_data/labels/test"
-OUTPUT_METRICS_TXT = "results/brazil/rslt_yolo11s_auto_labeling/exp/outputs_1/evaluation_metrics.txt"
-OUTPUT_IMG_DIR = "results/brazil/rslt_yolo11s_auto_labeling/exp/outputs_1/yolo_predictions"
+MODEL_PATH = "path/to/your_trained_yolo_model"  # Path to the model
+DATA_YAML = "path/to/data.yaml"
+IMAGES_TEST_DIR = "path/to/images_test"
+LABELS_TEST_DIR = "path/to/labels_test"
+OUTPUT_METRICS_TXT = "path/to/output_metrics.txt"
+OUTPUT_IMG_DIR = "path/to/output_images"
+
 
 
 
@@ -29,13 +30,14 @@ model = YOLO(MODEL_PATH)
 metrics = model.val(split="test", data=DATA_YAML, max_det=1)
 
 # === Save YOLO metrics ===
+
 with open(OUTPUT_METRICS_TXT, "w") as f:
-    f.write("=== YOLO11n trained on auto_labeling train data and  Evaluated on golden Test Set ===\n")
+    f.write("=== YOLOv8 trained on yolo8 and Evaluated on golden Test Set ===\n")
     f.write(f"mAP@0.5        : {metrics.box.map50:.4f}\n")
     f.write(f"mAP@0.5:0.95   : {metrics.box.map:.4f}\n")
     f.write(f"Mean Precision : {metrics.box.mp:.4f}\n")
-    f.write(f"Mean Recall    : {metrics.box.mr:.4f}\n\n")
-    f.write("=== Per-class Metrics ===\n")
+    f.write(f"Mean Recall    : {metrics.box.mr:.4f}\n")
+
     # Mean F1-score
     if (metrics.box.mp + metrics.box.mr) > 0:
         mean_f1 = 2 * metrics.box.mp * metrics.box.mr / (metrics.box.mp + metrics.box.mr)

@@ -2,6 +2,8 @@ import os
 import shutil
 import random
 
+"""This script prepares a YOLO dataset for Bangladesh school detection. based on images automatically labeled by our pipeline."""
+
 # ------------ CONFIGURATION ------------
 school_img_dir = "dataset/bangladesh/satellite/school"
 school_lbl_dir = "dataset/bangladesh/satellite/school_labels"
