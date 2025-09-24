@@ -1,0 +1,6 @@
+train: train.txt              # train images folder
+val: val.txt                  # val images folder
+test: test.txt                # test images folder
+
+nc: 1
+names: ['school']
