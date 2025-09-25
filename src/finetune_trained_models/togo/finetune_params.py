@@ -5,7 +5,7 @@ import numpy as np
 from ultralytics import YOLO
 
 
-DATA_YAML = 'dataset/togo/manual_labeled_data/data.yaml'
+DATA_YAML = 'dataset/togo/manual_labeled_data/data.yaml' # path to data.yaml file 
 
 
 # === Step 1: Clone ECP if not already present ===
@@ -19,7 +19,7 @@ from optimizers.ECP import ECP
 
 # === Step 2: Define Objective Function ===
 class YOLOObjective:
-    def __init__(self, log_path="results/togo/ecp_yolo10n_log.csv"):
+    def __init__(self, log_path="results/togo/ecp_yolo10n_log.csv"): # change if needed (csv file to store all the results of experiments
         self.bounds = np.array([
           [1e-4, 1e-2],     # 0: lr0            (default: 0.001)
           [0.01, 0.1],      # 1: lrf            (default: 0.01)
@@ -56,7 +56,7 @@ class YOLOObjective:
         save_dir="results/togo/rslt_yolo10n_finetuning_auto_on_golden_best_params"
 
         try:
-            model = YOLO("results/togo/rslt_yolo10n_auto_labeling/exp/weights/best.pt")
+            model = YOLO("results/togo/rslt_yolo10n_auto_labeling/exp/weights/best.pt") #existing model pretrained on auto-labeled data(change if needed)
 
             results = model.train(
                 data=DATA_YAML,
@@ -80,7 +80,7 @@ class YOLOObjective:
                 save=True,
                 save_period=20,
                 verbose=False,
-                project="results/togo/rslt_yolo10n_finetuning_auto_on_golden_best_params",
+                project="results/togo/rslt_yolo10n_finetuning_auto_on_golden_best_params",  # change if needed
                 name=exp_name,
             )
 

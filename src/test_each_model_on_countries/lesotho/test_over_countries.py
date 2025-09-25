@@ -6,10 +6,12 @@ from pathlib import Path
 from collections import defaultdict
 from ultralytics import YOLO
 
+""" this script is to evaluaten the model trained on lesotho avec the other countries"""
+
 # =====================
 # CONFIGURATION
 # =====================
-MODEL_PATH = "results/lesotho/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/weights/best.pt"
+MODEL_PATH = "pathb to lesotho's model that you want to evaluate"
 COUNTRIES = ["brazil", "peru", "nigeria", "togo", "colombia", "bangladesh", "mali"]
 NUM_IMAGES = 10
 
@@ -126,10 +128,10 @@ model = YOLO(MODEL_PATH)
 for country in COUNTRIES:
     print(f"\n=== Evaluating on {country.upper()} ===")
 
-    data_yaml = f"dataset/{country}/manual_labeled_data/data.yaml"
-    images_test_dir = f"dataset/{country}/manual_labeled_data/images/test"
-    labels_test_dir = f"dataset/{country}/manual_labeled_data/labels/test"
-    output_dir = f"results/lesotho/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/outputs_over_{country}"
+    data_yaml = f"dataset/{country}/manual_labeled_data/data.yaml" # change if needed 
+    images_test_dir = f"dataset/{country}/manual_labeled_data/images/test"  # change if needed
+    labels_test_dir = f"dataset/{country}/manual_labeled_data/labels/test"# change if needed
+    output_dir = f"results/lesotho/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/outputs_over_{country}"  # change if needed
     os.makedirs(os.path.join(output_dir, "yolo_predictions"), exist_ok=True)
     output_metrics = os.path.join(output_dir, "evaluation_metrics.txt")
 

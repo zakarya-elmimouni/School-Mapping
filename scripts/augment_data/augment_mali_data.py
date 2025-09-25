@@ -5,8 +5,8 @@ import numpy as np
 import random
 
 # Directories (train only)
-IMG_DIR = "dataset/mali/dataset_yolo_auto_labeling/images/val"
-LABEL_DIR = "dataset/mali/dataset_yolo_auto_labeling/labels/val"
+IMG_DIR = "dataset/mali/dataset_yolo_auto_labeling/images/train"
+LABEL_DIR = "dataset/mali/dataset_yolo_auto_labeling/labels/train"
 IMG_EXT = ".png"
 
 # Parameters

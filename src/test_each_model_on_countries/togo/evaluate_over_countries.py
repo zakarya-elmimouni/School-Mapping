@@ -9,7 +9,7 @@ from ultralytics import YOLO
 # =====================
 # CONFIGURATION
 # =====================
-MODEL_PATH = "results/togo/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/weights/best.pt"
+MODEL_PATH = "path to the model that you want to evaluate"
 COUNTRIES = ["brazil", "peru", "nigeria", "mali", "colombia", "bangladesh", "lesotho"]
 NUM_IMAGES = 10
 

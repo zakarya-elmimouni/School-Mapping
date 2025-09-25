@@ -5,7 +5,7 @@ import numpy as np
 from ultralytics import YOLO
 
 
-DATA_YAML = 'dataset/global_golden_dataset/data.yaml'
+DATA_YAML = 'dataset/global_golden_dataset/data.yaml'# change as needed 
 
 
 # === Step 1: Clone ECP if not already present ===
@@ -19,7 +19,7 @@ from optimizers.ECP import ECP
 
 # === Step 2: Define Objective Function ===
 class YOLOObjective:
-    def __init__(self, log_path="results/global_golden/ecp_yolo10n_finetuning_peru_based_log.csv"):
+    def __init__(self, log_path="results/global_golden/ecp_yolo10n_finetuning_peru_based_log.csv"):# change as needed
         self.bounds = np.array([
           [1e-4, 1e-2],     # 0: lr0            (default: 0.001)
           [0.01, 0.1],      # 1: lrf            (default: 0.01)
@@ -53,10 +53,10 @@ class YOLOObjective:
             f"lr{lr0:.1e}_lrf{lrf:.2f}_m{momentum:.2f}_wd{weight_decay:.4f}"
             f"_box{box:.1f}_t{translate:.2f}_cls{cls:.2f}_dfl{dfl:.2f}_dr{dropout:.2f}_erase{erasing:.2f}"
         )
-        save_dir="results/global_golden/rslt_yolo10n_finetuning_params_finetuned_peru"
+        save_dir="results/global_golden/rslt_yolo10n_finetuning_params_finetuned_peru" # change as needed
 
         try:
-            model = YOLO("results/peru/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/weights/best.pt")
+            model = YOLO("results/peru/rslt_yolo10n_finetuning_auto_on_golden_best_params/best/weights/best.pt") # path to existing pretrained model on auto labeled data ( change as needed)
 
             results = model.train(
                 data=DATA_YAML,
@@ -80,7 +80,7 @@ class YOLOObjective:
                 save=True,
                 save_period=40,
                 verbose=False,
-                project="results/global_golden/rslt_yolo10n_finetuning_params_finetuned_peru",
+                project="results/global_golden/rslt_yolo10n_finetuning_params_finetuned_peru", # path to saving directory (change as needed)
                 name=exp_name,
             )
 

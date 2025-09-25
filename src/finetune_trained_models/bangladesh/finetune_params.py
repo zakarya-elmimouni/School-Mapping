@@ -59,7 +59,7 @@ class YOLOObjective:
         save_dir="results/bangladesh/rslt_yolo10n_finetuning_auto_on_golden_best_params"
 
         try:
-            model = YOLO("results/bangladesh/rslt_yolo10n_auto_labeling/exp/weights/best.pt")
+            model = YOLO("results/bangladesh/rslt_yolo10n_auto_labeling/exp/weights/best.pt")# existing pretarined model on auto_labeled_data ( change as needed)
 
             results = model.train(
                 data=DATA_YAML,
@@ -83,7 +83,7 @@ class YOLOObjective:
                 save=True,
                 save_period=20,
                 verbose=False,
-                project="results/bangladesh/rslt_yolo10n_finetuning_auto_on_golden_best_params",
+                project="results/bangladesh/rslt_yolo10n_finetuning_auto_on_golden_best_params",# saving directory (change as needed)
                 name=exp_name,
             )
 

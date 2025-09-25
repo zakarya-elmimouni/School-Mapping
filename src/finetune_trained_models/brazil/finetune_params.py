@@ -7,7 +7,7 @@ from ultralytics import YOLO
 """ This script uses the ECP optimizer to fine-tune YOLOv10n hyperparameters of the model already trained on auto-labeled data ."""
 
 
-DATA_YAML = 'dataset/brazil/manual_labeled_data/data.yaml'
+DATA_YAML = 'dataset/brazil/manual_labeled_data/data.yaml' # change as needed
 
 
 # === Step 1: Clone ECP if not already present ===
@@ -21,7 +21,7 @@ from optimizers.ECP import ECP
 
 # === Step 2: Define Objective Function ===
 class YOLOObjective:
-    def __init__(self, log_path="ecp_yolo10n_log.csv"):
+    def __init__(self, log_path="ecp_yolo10n_log.csv"):# change as needed
         self.bounds = np.array([
           [1e-4, 1e-2],     # 0: lr0            (default: 0.001)
           [0.01, 0.1],      # 1: lrf            (default: 0.01)
@@ -55,10 +55,10 @@ class YOLOObjective:
             f"lr{lr0:.1e}_lrf{lrf:.2f}_m{momentum:.2f}_wd{weight_decay:.4f}"
             f"_box{box:.1f}_t{translate:.2f}_cls{cls:.2f}_dfl{dfl:.2f}_dr{dropout:.2f}_erase{erasing:.2f}"
         )
-        save_dir="results/brazil/rslt_yolo10n_finetuning_auto_on_golden_best_params"
+        save_dir="results/brazil/rslt_yolo10n_finetuning_auto_on_golden_best_params" # change as needed
 
         try:
-            model = YOLO("results/brazil/rslt_yolo10n_auto_labeling/exp/weights/best.pt")
+            model = YOLO("results/brazil/rslt_yolo10n_auto_labeling/exp/weights/best.pt") # change as needed existing model pretrained on auto labeled data
 
             results = model.train(
                 data=DATA_YAML,
@@ -82,7 +82,7 @@ class YOLOObjective:
                 save=True,
                 save_period=20,
                 verbose=False,
-                project="results/brazil/rslt_yolo10n_finetuning_auto_on_golden_best_params",
+                project="results/brazil/rslt_yolo10n_finetuning_auto_on_golden_best_params",# change as needed ( saving directory)
                 name=exp_name,
             )
 

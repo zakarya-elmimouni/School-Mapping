@@ -12,7 +12,7 @@ non_school_img_dir = "data/peru/satellite/non_school"
 base_output_dir = "dataset/peru/dataset_yolo_auto_labeling"
 img_ext = ".png"
 seed = 42
-max_non_school = 2000  #limit non_school to 1500
+max_non_school = 2000  #limit non_school to 2000
 
 # Split ratios
 split_ratio = {"train": 0.8, "val": 0.15, "test": 0.05}

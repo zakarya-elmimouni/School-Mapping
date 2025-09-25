@@ -1,8 +1,10 @@
 from ultralytics import YOLO
 
+"""this scripts is used to train the yolov10n over data"""
+
 # Path to your YAML file
-#DATA_YAML = 'dataset/brazil/fixed_bb_and_manual_data/generated_dataset1/data.yaml'
-DATA_YAML = 'dataset/togo/manual_labeled_data/data.yaml'
+
+DATA_YAML = 'dataset/togo/manual_labeled_data/data.yaml'  # change to auto_labeled_data if you want to train 
 # Model: YOLO10n
 model = YOLO('yolov10n.pt')
 
@@ -17,7 +19,7 @@ results = model.train(
     pretrained=True,
     seed=0,
     device=[0,1],
-    project='results/togo/rslt_yolo10n_manual_labeled_data',
+    project='path to where you want to store results ',
     name='exp',
     save=True,
     plots=True,

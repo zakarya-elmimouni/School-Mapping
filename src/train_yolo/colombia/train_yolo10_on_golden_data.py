@@ -2,7 +2,7 @@ from ultralytics import YOLO
 
 # Path to your YAML file
 
-DATA_YAML = 'dataset/colombia/manual_labeled_data/data.yaml'
+DATA_YAML = 'dataset/colombia/manual_labeled_data/data.yaml' # path to data.yaml file 
 # Model: YOLO10n
 model = YOLO('yolov10n.pt')
 
@@ -17,7 +17,7 @@ results = model.train(
     pretrained=True,
     seed=0,
     device=[0,1],
-    project='results/colombia/rslt_yolo10n_manual_labeled_data',
+    project='path to where you want to store results', # saving directory (change as needed)
     name='exp',
     save=True,
     plots=True,

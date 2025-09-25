@@ -10,19 +10,12 @@ from collections import defaultdict
 
 
 
-#MODEL_PATH = "results/bangladesh/rslt_yolo10n_manual_labeled_data/exp/weights/best.pt"
-#DATA_YAML = "dataset/bangladesh/manual_labeled_data/data.yaml"
-#IMAGES_TEST_DIR = "dataset/bangladesh/manual_labeled_data/images/test"
-#LABELS_TEST_DIR = "dataset/bangladesh/manual_labeled_data/labels/test"
-#OUTPUT_METRICS_TXT = "results/bangladesh/rslt_yolo10n_manual_labeled_data/exp/outputs/evaluation_metrics.txt"
-#OUTPUT_IMG_DIR = "results/bangladesh/rslt_yolo10n_manual_labeled_data/exp/outputs/yolo_predictions"
-
-
-MODEL_PATH = "results/africa_global_golden/rslt_yolo10n_finetuning_params_finetuned_nigeria/try4/weights/best.pt"
-DATA_YAML = "dataset/africa_global_golden_dataset/data.yaml"
-
-OUTPUT_METRICS_TXT = "results/africa_global_golden/rslt_yolo10n_finetuning_params_finetuned_nigeria/try4/outputs/evaluation_metrics.txt"
-OUTPUT_IMG_DIR = "results/africa_global_golden/rslt_yolo10n_finetuning_params_finetuned_nigeria/try4/outputs/yolo_predictions"
+MODEL_PATH = "path/to/weights/best.pt"
+DATA_YAML = "path/to/data.yaml"
+IMAGES_TEST_DIR = "path/to/images/test"
+LABELS_TEST_DIR = "path/to/labels/test"
+OUTPUT_METRICS_TXT = "path/to/output/metrics.txt"
+OUTPUT_IMG_DIR = "path/to/output/visualizations"
 
 
 

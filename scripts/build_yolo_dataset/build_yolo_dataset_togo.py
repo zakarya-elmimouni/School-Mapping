@@ -2,15 +2,17 @@ import os
 import shutil
 import random
 
+""" this script prepares a YOLO dataset for togo based on auto-labeled images and thier labels provided by our automatic piepline"""
+
 # ------------ CONFIGURATION ------------
-school_img_dir = "dataset/togo/satellite/school"
-school_lbl_dir = "dataset/togo/satellite/school_labels"
-non_school_img_dir = "data/togo/satellite/non_school"
+school_img_dir = "dataset/togo/satellite/school"  # cleaned school_images directory
+school_lbl_dir = "dataset/togo/satellite/school_labels" # cleaned school labels directory
+non_school_img_dir = "data/togo/satellite/non_school"  # non school images directory 
 
 base_output_dir = "dataset/togo/dataset_yolo_auto_labeling"
 img_ext = ".png"
 seed = 42
-max_non_school = 2000  #limit non_school to 1500
+max_non_school = 2000  #limit non_school to 2000
 
 # Split ratios
 split_ratio = {"train": 0.8, "val": 0.15, "test": 0.05}

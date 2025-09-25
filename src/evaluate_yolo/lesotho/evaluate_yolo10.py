@@ -9,21 +9,12 @@ from collections import defaultdict
 
 
 
-
-#MODEL_PATH = "results/bangladesh/rslt_yolo10n_manual_labeled_data/exp/weights/best.pt"
-#DATA_YAML = "dataset/bangladesh/manual_labeled_data/data.yaml"
-#IMAGES_TEST_DIR = "dataset/bangladesh/manual_labeled_data/images/test"
-#LABELS_TEST_DIR = "dataset/bangladesh/manual_labeled_data/labels/test"
-#OUTPUT_METRICS_TXT = "results/bangladesh/rslt_yolo10n_manual_labeled_data/exp/outputs/evaluation_metrics.txt"
-#OUTPUT_IMG_DIR = "results/bangladesh/rslt_yolo10n_manual_labeled_data/exp/outputs/yolo_predictions"
-
-
-MODEL_PATH = "results/lesotho/rslt_yolo10n_auto_labeling/exp/weights/best.pt"
-DATA_YAML = "dataset/lesotho/manual_labeled_data/data.yaml"
-IMAGES_TEST_DIR = "dataset/lesotho/manual_labeled_data/images/test"
-LABELS_TEST_DIR = "dataset/lesotho/manual_labeled_data/labels/test"
-OUTPUT_METRICS_TXT = "results/lesotho/rslt_yolo10n_auto_labeling/exp/outputs/evaluation_metrics.txt"
-OUTPUT_IMG_DIR = "results/lesotho/rslt_yolo10n_auto_labeling/exp/outputs/yolo_predictions"
+MODEL_PATH = "path/to/weights/best.pt"
+DATA_YAML = "path/to/data.yaml"
+IMAGES_TEST_DIR = "path/to/images/test"
+LABELS_TEST_DIR = "path/to/labels/test"
+OUTPUT_METRICS_TXT = "path/to/output/metrics.txt"
+OUTPUT_IMG_DIR = "path/to/output/visualizations"
 
 
 

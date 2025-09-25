@@ -4,8 +4,8 @@ import glob
 import numpy as np
 import random
 
-# Directories (train only)
-IMG_DIR = "dataset/togo/manual_labeled_data/images/train"
+# Directories 
+IMG_DIR = "dataset/togo/manual_labeled_data/images/train"   
 LABEL_DIR = "dataset/togo/manual_labeled_data/labels/train"
 IMG_EXT = ".png"
 
