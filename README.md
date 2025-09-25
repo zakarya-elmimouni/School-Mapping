@@ -5,6 +5,26 @@ This repository contains the codebase for the weakly supervised object detection
 ---
 ## 🎥 Demo
 ![Demo](demo.gif)
+
+## 🏫 School Detection Web App
+
+We provide an interactive **Streamlit application** that lets you detect schools on satellite images using our trained YOLO models of differnt countries and also global and regional models  (`togo`, `peru`, `brazil`, `big_global`, …).
+
+### 1️⃣ Features
+- Upload any satellite image (PNG/JPG); it is automatically resized to **500 × 500 px**.
+- Select the model you want to use among our different models.
+- Get an **annotated image** with a red bounding box if a school is detected.
+- Download the processed image in one click.
+### 2️⃣ How to run the Application 
+Make sure to download all the models from the google drive link  
+school-detector/
+└─ models/
+   ├─ togo/best.pt
+   ├─ peru/best.pt
+   ├─ brazil/best.pt
+   ...
+   └─ big_global_model/best.pt
+  
 ##  Project Structure & Key Features
 
 - Automatic data download from Google Static Maps API (requires API key)
