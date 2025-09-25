@@ -2,7 +2,7 @@ from ultralytics import YOLO
 
 # Path to your YAML file
 
-DATA_YAML = 'dataset/brazil/dataset_yolo_auto_labeling/data.yaml' # change as needed 
+DATA_YAML = 'dataset/brazil/dataset_yolo_auto_labeling/data.yaml' # data.yaml file (change as needed 
 # Model: YOLO5n
 model = YOLO('yolov5n.pt')
 
@@ -17,7 +17,7 @@ results = model.train(
     pretrained=True,
     seed=0,
     device=[0,1],
-    project='results/brazil/rslt_yolo5n_auto_labeling', # change as needed 
+    project='results/brazil/rslt_yolo5n_auto_labeling', # saving directory (change as needed)
     name='exp',
     save=True,
     plots=True,

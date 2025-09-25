@@ -1,8 +1,8 @@
 from ultralytics import YOLO
 
 # Path to your YAML file
-#DATA_YAML = 'dataset/brazil/fixed_bb_and_manual_data/generated_dataset1/data.yaml'
-DATA_YAML = 'dataset/brazil/dataset_yolo_auto_labeling/data.yaml'
+
+DATA_YAML = 'dataset/brazil/dataset_yolo_auto_labeling/data.yaml' # data.yaml file (change as needed)
 # Model: YOLO12n
 model = YOLO('yolo12m.pt')
 
@@ -17,7 +17,7 @@ results = model.train(
     pretrained=True,
     seed=0,
     device=[0,1],
-    project='results/brazil/rslt_yolo12m_auto_labeling',
+    project='results/brazil/rslt_yolo12m_auto_labeling', # saving directory (change as needed)
     name='exp',
     save=True,
     plots=True,

@@ -2,7 +2,7 @@ from ultralytics import YOLO
 
 # Path to your YAML file
 
-DATA_YAML = 'dataset/togo/dataset_yolo_auto_labeling/data.yaml'
+DATA_YAML = 'dataset/togo/dataset_yolo_auto_labeling/data.yaml' # change as needed (data.yaml file) 
 # Model: YOLO10n
 model = YOLO('yolov10n.pt')
 
