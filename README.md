@@ -16,7 +16,7 @@ We provide an interactive **Streamlit application** that lets you detect schools
 - Get an **annotated image** with a red bounding box if a school is detected.
 - Download the processed image in one click.
 ### 2️⃣ How to run the Application 
-1-Make sure to download all the models from the google drive link and add them to the folder models  
+1-Check the models in school-detector folder.  
 ```bash
 school-detector/
 └─ models/
@@ -76,8 +76,8 @@ To use this dataset:
 - Copy only the matching images from data/{country}/satellite/ (same filenames as labels).
 - Build the golden dataset for each country
 
-### 7. Prepare Global Dataset
-- run the code in scripts/create_globale_golden_dataset.py to create the global golden dataset.
+### 7. Prepare Global Datasets
+- run the code in scripts/create_global_dataset_with_txt_files.py to create the global golden dataset or the african regional dataset.
 
 ### 8. Train and Evaluate YOLO models
 Once the datasets are ready you can lunch the training and evaluation.
