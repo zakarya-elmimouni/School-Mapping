@@ -3,7 +3,35 @@
 This repository contains the codebase for the weakly supervised object detection pipeline used to detect school buildings from satellite images, in the context of digital connectivity and infrastructure mapping. The approach relies on a large dataset of auto-labeled images and a smaller manually annotated set (golden data), with segmentation-based labeling, training, and fine-tuning strategies.
 
 ---
+## 🎥 Demo
+![Demo](demo.gif)
 
+## 🏫 School Detection Web App
+
+We provide an interactive **Streamlit application** that lets you detect schools on satellite images using our trained YOLO models of differnt countries and also global and regional models  (`togo`, `peru`, `brazil`, `big_global`, …).
+
+### 1️⃣ Features
+- Upload any satellite image (PNG/JPG); it is automatically resized to **500 × 500 px**.
+- Select the model you want to use among our different models.
+- Get an **annotated image** with a red bounding box if a school is detected.
+- Download the processed image in one click.
+### 2️⃣ How to run the Application 
+1-Make sure to download all the models from the google drive link and add them to the folder models  
+```bash
+school-detector/
+└─ models/
+   ├─ togo/best.pt
+   ├─ peru/best.pt
+   ├─ brazil/best.pt
+   ...
+   └─ big_global_model/best.pt
+```
+2- Run the App: start the Streamlit server by running:
+```bash
+streamlit run app.py
+```
+
+  
 ##  Project Structure & Key Features
 
 - Automatic data download from Google Static Maps API (requires API key)
