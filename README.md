@@ -16,7 +16,8 @@ We provide an interactive **Streamlit application** that lets you detect schools
 - Get an **annotated image** with a red bounding box if a school is detected.
 - Download the processed image in one click.
 ### 2️⃣ How to run the Application 
-Make sure to download all the models from the google drive link  
+1-Make sure to download all the models from the google drive link and add them to the folder models  
+```bash
 school-detector/
 └─ models/
    ├─ togo/best.pt
@@ -24,6 +25,12 @@ school-detector/
    ├─ brazil/best.pt
    ...
    └─ big_global_model/best.pt
+```
+2- Run the App: start the Streamlit server by running:
+```bash
+streamlit run app.py
+```
+
   
 ##  Project Structure & Key Features
 
