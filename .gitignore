@@ -13,7 +13,7 @@ run/
 quick_test/
 
 outputs/
-models/
+
 
 # Ignorer les API sensibles ou locales
 api_keys.py
